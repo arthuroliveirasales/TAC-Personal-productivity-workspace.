@@ -1,4 +1,100 @@
-body {
-    font-family: Poppins;
-    color: cadetblue;
+body{
+    background-color: oklch(15.434% 0.00002 271.152);
+}
+.principal{
+    height: 600px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    flex-direction: column;
+}
+.titulo{
+    color: white;
+    font-size: 80px;
+    
+}
+.barra{
+    color: oklch(87.2% 0.01 258.338);
+    font-size: 20px;
+}
+.container{
+    display:flex;
+    background-color: rgb(255, 255, 255);
+    height: 1000px;
+    flex-direction: column;
+}
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    gap: 170px;
+}
+h2{
+    font-size: 40px;
+    margin-left: 40px;
+}
+p{
+    font-size: 20px;
+    margin-left: 40px;
+    height: 200px;
+    width: 500px; 
+}
+.foto1{
+    width: 400px;
+    margin-top: 35px;
+}
+.foto2{
+    width: 400px;
+}
+.login{
+    color: white;
+    font-size: 60px;
+    margin-top: 50px;
+}
+.botao{
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+button{
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    border: none;
+    font-size: 50px;
+
+}
+footer{
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+a{
+    color: white;
+}
+.galeria{
+    position: relative;
+    margin-top: 8px;
+}
+.imagens2{
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+}
+.botao{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.finalimg{
+    display: block;
+    width: 350px;
+    height: 350px;
 }
