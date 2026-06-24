@@ -27,10 +27,86 @@ function criarCard(){
 
 //button's of menuOptions:
 
+//addTask function
     const addTask = document.createElement("button");
     addTask.classList.add("addTask");
     addTask.textContent = "Add List";
 
+
+    addTask.addEventListener("click", criarList);
+
+    function criarList(){
+        const list = document.createElement("div");
+        list.classList.add("list");
+
+        const listTitleContainer = document.createElement("div");
+        listTitleContainer.classList.add("listTitleConteiner");
+
+        const listTitle = document.createElement("input");
+        listTitle.classList.add("listTitle");
+        listTitle.placeholder = "Title";
+
+        const listContentContainer = document.createElement("div");
+        listContentContainer.classList.add("listContentContainer");
+
+        const listContent = document.createElement("div");
+        listContent.classList.add("listContent");
+
+        const content = document.createElement("input");
+        content.classList.add("content");
+
+        const complete = document.createElement("button");
+        complete.classList.add("complete");
+
+        const addAndRemoveListContentConteiner = document.createElement("div");
+        addAndRemoveListContentConteiner.classList.add("addAndRemoveListContentConteiner");
+
+        const addListContent = document.createElement("button");
+        addListContent.classList.add("addListContent");
+        addListContent.textContent = "+ Add";
+
+        const removeListContent = document.createElement("button");
+        removeListContent.classList.add("removeListContent");
+        removeListContent.textContent = "- Remove";
+
+    cardContent.append(list);
+
+    list.append(listTitleContainer);
+        listTitleContainer.append(listTitle);
+
+    list.append(listContentContainer)
+        listContentContainer.append(listContent);
+            listContent.append(content);
+            listContent.append(complete);
+
+    list.append(addAndRemoveListContentConteiner);
+        addAndRemoveListContentConteiner.append(addListContent);
+        addAndRemoveListContentConteiner.append(removeListContent);
+
+addListContent.addEventListener("click", addContent);
+
+function addContent(){
+    console.log("teste123");
+    const listContent = document.createElement("div");
+    listContent.classList.add("listContent");
+
+    const content = document.createElement("input");
+    content.classList.add("content");
+
+    const complete = document.createElement("button");
+    complete.classList.add("complete");
+
+    listContentContainer.append(listContent);
+    listContent.append(content);
+    listContent.append(complete);
+
+}
+
+
+
+
+    }
+//}            
     const uploadFile = document.createElement("button");
     uploadFile.classList.add("uploadFile");
     uploadFile.textContent = "UploadFile";
@@ -132,8 +208,8 @@ function closeOptions(){
 
 //delet card:
 
-originalDeleteCard = document.querySelector(".deleteCard");
-originalCard = document.querySelector(".card");
+const originalDeleteCard = document.querySelector(".deleteCard");
+const originalCard = document.querySelector(".card");
 
 originalDeleteCard.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -141,3 +217,59 @@ originalDeleteCard.addEventListener("click", (e) => {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const listContentContainer = document.querySelector(".listContentContainer");
+const originalAddListContent = document.querySelector(".addListContent");
+
+originalAddListContent.addEventListener("click", addContent);
+
+function addContent(){
+    console.log("teste123");
+    const listContent = document.createElement("div");
+    listContent.classList.add("listContent");
+
+    const content = document.createElement("input");
+    content.classList.add("content");
+
+    const complete = document.createElement("button");
+    complete.classList.add("complete");
+
+    listContentContainer.append(listContent);
+    listContent.append(content);
+    listContent.append(complete);
+
+}
+
+//    const removeListContent = document.querySelector(".removeListContent");
+
+//    removeListContent.addEventListener("click", removeContent);
+
+//    function removeContent(){
+//    listContent.remove();
+//}
