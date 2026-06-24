@@ -86,7 +86,6 @@ function criarCard(){
 addListContent.addEventListener("click", addContent);
 
 function addContent(){
-    console.log("teste123");
     const listContent = document.createElement("div");
     listContent.classList.add("listContent");
 
