@@ -51,7 +51,7 @@ body::-webkit-scrollbar{
     margin-left: 5px;
     margin-top: 8px;
     margin-bottom: 8px;
-    color: rgb(61, 61, 61);
+    color: rgb(104, 104, 104);
 }
 .removeListContent:hover{
     background-color: rgb(226, 226, 226);
@@ -73,7 +73,7 @@ body::-webkit-scrollbar{
     margin-left: 5px;
     margin-top: 8px;
     margin-bottom: 8px;
-    color: rgb(61, 61, 61);
+    color: rgb(104, 104, 104);
 }
 .addListContent:hover{
     background-color: rgb(226, 226, 226);
@@ -181,13 +181,28 @@ body::-webkit-scrollbar{
 .pageTop{
     display: flex;
 }
-.userWorkSpaceAll{
+.userWorkSpace{
     display: flex;
-    border: 1px solid rgb(221, 221, 221);
+    border: 1px solid rgb(226, 226, 226);
+    background-color: white;
     border-radius: 5px;
     width: 300px;
     height: 24px;
     align-items: center;
+    justify-content: center;
+}
+.userWorkSpace:hover{
+    background-color: rgb(224, 224, 224);
+}
+.userWorkSpace:active{
+    background-color: rgb(180, 180, 180);
+}
+.userName{
+    width: 180px;
+    margin-right: 47%;
+}
+.userImg{
+    margin-right: auto;
 }
 .searchBarrAll{
     display: flex;
@@ -209,16 +224,8 @@ body::-webkit-scrollbar{
     border: none;
 }
 .setaExpandir{
-    margin-left: 54%;
+    margin-left: 0;
     height: 15px;
-}
-.setaExpandir:hover{
-    opacity: 0.3;
-    transition: 0.3s;
-}
-.userWorkSpace{
-    border: none;
-    background-color: white;
 }
 .spaceWork{
     border: 1px solid rgb(231, 231, 231);
@@ -276,19 +283,22 @@ body::-webkit-scrollbar{
 .addCard:active{
     background-color: white;
 }
-.filters{
-    border: 1px solid rgb(238, 238, 238);
+.filtersContainer{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    border: none;
     background-color: white;
     height: 30px;
-    width: 58px;
+    width: 64px;
     border-radius: 10px ;
     color: rgb(17, 17, 17);
 }
-.filters:hover{
+.filtersContainer:hover{
     background-color: rgb(228, 228, 228);
     transition: 0.3s;
 }
-.filters:active{
+.filtersContainer:active{
     background-color: rgb(192, 192, 192);
 }
 .cardContainer{
@@ -315,7 +325,7 @@ body::-webkit-scrollbar{
     gap: 10px;
     padding-left: 10px;
     padding-top: 10px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .cardTop{
     display: flex;
