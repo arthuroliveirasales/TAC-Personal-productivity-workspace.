@@ -27,7 +27,7 @@ function criarCard(){
 
 //button's of menuOptions:
 
-//addTask function
+//addTask button function
     const addTask = document.createElement("button");
     addTask.classList.add("addTask");
     addTask.textContent = "Add List";
@@ -40,11 +40,15 @@ function criarCard(){
         list.classList.add("list");
 
         const listTitleContainer = document.createElement("div");
-        listTitleContainer.classList.add("listTitleConteiner");
+        listTitleContainer.classList.add("listTitleContainer");
 
         const listTitle = document.createElement("input");
         listTitle.classList.add("listTitle");
         listTitle.placeholder = "Title";
+
+        const removeButton = document.createElement("button");
+        removeButton.classList.add("removeButton");
+        removeButton.textContent = "‒";
 
         const listContentContainer = document.createElement("div");
         listContentContainer.classList.add("listContentContainer");
@@ -65,16 +69,16 @@ function criarCard(){
     cardContent.append(list);
 
     list.append(listTitleContainer);
-        listTitleContainer.append(listTitle);
+        listTitleContainer.append(listTitle, removeButton);
 
-    list.append(listContentContainer)
+    list.append(listContentContainer);
 
 
     list.append(addAndRemoveListContentConteiner);
         addAndRemoveListContentConteiner.append(addListContent);
         addAndRemoveListContentConteiner.append(removeListContent);
 
-
+//addListContent:
 
 addListContent.addEventListener("click", () => {
     const listContent = document.createElement("div");
@@ -99,9 +103,12 @@ removeListContent.addEventListener("click", () => {
     const last = listContentContainer.lastElementChild;
     if (last) last.remove();
 });
+ 
+removeButton.addEventListener("click", () => {
+    list.remove();
+});
 
-
-}
+};
 //}   
 
 //addNotes:
@@ -111,13 +118,20 @@ removeListContent.addEventListener("click", () => {
     addNotes.textContent = "Add Notes";
 
     addNotes.addEventListener("click", () => {
+        const inputContentContainer = document.createElement("div");
+        inputContentContainer.classList.add("inputContentContainer");
+
         const inputContent = document.createElement("textarea");
         inputContent.classList.add("inputContent");
         inputContent.placeholder = "Type something";
 
-        
-        cardContent.append(inputContent);
-        
+        const removeButton = document.createElement("button");
+        removeButton.classList.add("removeButton");
+        removeButton.textContent = "‒";
+
+        cardContent.append(inputContentContainer);
+        inputContentContainer.append(inputContent, removeButton);
+
         inputContent.addEventListener("input", size);
 
     
@@ -125,42 +139,55 @@ removeListContent.addEventListener("click", () => {
     e.target.style.height = "auto";
     e.target.style.height = e.target.scrollHeight + "px";
 }
+
+removeButton.addEventListener("click", () => {
+    inputContentContainer.remove();
+});
+
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     const uploadFile = document.createElement("button");
     uploadFile.classList.add("uploadFile");
     uploadFile.textContent = "Upload File";
 
+//edit:
+
     const edit = document.createElement("button");
     edit.classList.add("edit");
     edit.textContent = "Edit";
+
+//edit action:
+
+edit.addEventListener("click", () => {
+    const removeButtons = cardContent.querySelectorAll(".removeButton");
+
+    removeButtons.forEach(button => {
+        button.classList.toggle("visible");
+    });
+});
+
+document.addEventListener("click", (e) => {
+    if (e.target.closest(".edit, .removeButton.visible")) return;
+
+    const removeButtons = cardContent.querySelectorAll(".removeButton");
+
+    removeButtons.forEach(button => {
+        button.classList.remove("visible");
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     const duplicate = document.createElement("button");
     duplicate.classList.add("duplicate");
