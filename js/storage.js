@@ -1,11 +1,11 @@
 /* Store Card */
 let cards = [];
 
-function saveCarda() {
-  localStorage.set("cards", JSON.stringify(cardArray));
+function saveCards() {
+  localStorage.setItem("cards", JSON.stringify(cards));
 }
 function load() {
-  cards = JSON.parse(localStorage.get("cards")) || [];
+  cards = JSON.parse(localStorage.getItem("cards")) || [];
 }
 
 load();
@@ -18,11 +18,16 @@ cardTItle.addEventListener("keydown", (e) => {
   const title = cardTitle.value.trim();
   if (!title) return;
 
-  const card = { id: crypto.randomUUID(), title };
+  const card = {
+    id: crypto.randomUUID(),
+    title,
+  };
 
   cards.push(card);
 
   saveCards();
+
+  //function render
 
   cardTitle.value = "";
 });
@@ -30,9 +35,10 @@ cardTItle.addEventListener("keydown", (e) => {
 /* ================= */
 /* Find Card */
 document.addEventListener("click", (e) => {
-  if (!e.target.closest(".card")) return;
+  const cardElement = e.target.closest(".card");
+  if (!cardElement) return;
   const id = card.dataset.id;
-  const card = cards.find((card) => card.id === id);
+  const cardData = cards.find((card) => card.id === id);
 });
 
 /* Note List */
