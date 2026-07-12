@@ -88,6 +88,7 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-left: 14px;
 }
 .addListContent {
   border: none;
@@ -384,7 +385,7 @@ body::-webkit-scrollbar {
 .cardContent::-webkit-scrollbar {
   display: none;
 }
-.inputContentContainer {
+.noteContainer {
   display: flex;
   resize: none;
   overflow: hidden;
@@ -397,7 +398,7 @@ body::-webkit-scrollbar {
   flex-shrink: 0;
   margin-top: 4px;
 }
-.inputContent {
+.note {
   resize: none;
   overflow: hidden;
   border: none;

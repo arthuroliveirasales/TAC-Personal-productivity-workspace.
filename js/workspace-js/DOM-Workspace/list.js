@@ -1,23 +1,27 @@
+import { createRemoveButton } from "./shared.js";
+
 export const createListElement = () => {
   const list = document.createElement("div");
   list.classList.add("list");
 
+  const listContentContainer = createListContentContainerElement();
+
   list.append(
-    createListTitleContainerElement(),
-    createListContentContainerElement(),
-    createListActionsContainerElement(),
+    createListTitleContainerElement(list),
+    listContentContainer,
+    createListActionsContainerElement(listContentContainer),
   );
 
   return list;
 };
-
-const createListActionsContainerElement = () => {
+//
+const createListActionsContainerElement = (listContentContainer) => {
   const listActionsContainer = document.createElement("div");
   listActionsContainer.classList.add("listActionsContainer");
 
   listActionsContainer.append(
-    createAddListContentButton(),
-    createRemoveListContentButton(),
+    createAddListContentButton(listContentContainer),
+    createRemoveListContentButton(listContentContainer),
   );
 
   return listActionsContainer;
@@ -33,10 +37,9 @@ const createAddListContentButton = (listContentContainer) => {
     const content = createContentElement();
     const complete = createCompleteButton();
 
-    console.log("test2343");
     contentCompleteContainer.append(content, complete);
 
-    createListContentContainerElement().append(contentCompleteContainer);
+    listContentContainer.append(contentCompleteContainer);
   });
 
   return addListContent;
@@ -48,23 +51,29 @@ const createRemoveListContentButton = (listContentContainer) => {
   removeListContent.textContent = "- Remove";
 
   removeListContent.addEventListener("click", () => {
-    contentCompleteContainer.remove();
+    const lastContent = listContentContainer.lastElementChild;
+
+    if (lastContent) {
+      lastContent.remove();
+    }
   });
 
   return removeListContent;
 };
 
-const createListTitleContainerElement = () => {
+//
+const createListTitleContainerElement = (list) => {
   const listTitleContainer = document.createElement("div");
   listTitleContainer.classList.add("listTitleContainer");
 
-  const remove = createRemoveButton();
+  const remove = createRemoveButton(list);
+  const listTitle = createListTitleInput();
 
-  listTitleContainer.append(createListTitleInput(), remove);
+  listTitleContainer.append(listTitle, remove);
 
   return listTitleContainer;
 };
-
+//
 const createListContentContainerElement = () => {
   const listContentContainer = document.createElement("div");
   listContentContainer.classList.add("listContentContainer");
@@ -111,13 +120,3 @@ const createContentElement = () => {
 
   return content;
 };
-
-/* Remove > remove elements at the card < ======================*/
-export const createRemoveButton = () => {
-  const remove = document.createElement("button");
-  remove.classList.add("remove");
-  remove.textContent = "-";
-
-  return remove;
-};
-/* ====================================================== */

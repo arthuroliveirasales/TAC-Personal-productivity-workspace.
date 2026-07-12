@@ -1,3 +1,25 @@
+export const createPopUpElement = (card, cardContentElement) => {
+  const popUp = document.createElement("div");
+  popUp.classList.add("popUp");
+
+  popUp.append(
+    createAddListButton(cardContentElement),
+    createAddNotesButton(cardContentElement),
+    createUploadFilesButton(),
+    createEditButton(),
+    createDuplicateButton(),
+    createDeleteCardButton(card),
+  );
+  return popUp;
+};
+
+/* popUp options ==================== */
+
+import { createListElement } from "./list.js";
+
+import { createNoteElement } from "./note.js";
+import { createNoteContainerElement } from "./note.js";
+
 const createAddListButton = (cardContentElement) => {
   const addList = document.createElement("button");
   addList.classList.add("addList");
@@ -12,10 +34,16 @@ const createAddListButton = (cardContentElement) => {
   return addList;
 };
 
-const createAddNotesButton = () => {
+const createAddNotesButton = (cardContentElement) => {
   const addNotes = document.createElement("button");
   addNotes.classList.add("addNotes");
   addNotes.textContent = "Add Notes";
+
+  addNotes.addEventListener("click", () => {
+    cardContentElement.append(noteContainer);
+
+    /*     note.addEventListener("input", size); */
+  });
 
   return addNotes;
 };
@@ -26,10 +54,19 @@ const createUploadFilesButton = () => {
 
   return uploadFiles;
 };
-const createEditButton = () => {
+
+export const createEditButton = () => {
   const edit = document.createElement("button");
   edit.classList.add("edit");
   edit.textContent = "Edit";
+
+  edit.addEventListener("click", () => {
+    const card = edit.closest(".card");
+    const removeButtons = card.querySelectorAll(".remove");
+    removeButtons.forEach((remove) => {
+      remove.classList.toggle("visible");
+    });
+  });
 
   return edit;
 };
@@ -37,7 +74,7 @@ const createEditButton = () => {
 const createDuplicateButton = () => {
   const duplicate = document.createElement("button");
   duplicate.classList.add("duplicate");
-  duplicate.textContent = "duplicate";
+  duplicate.textContent = "Duplicate";
 
   return duplicate;
 };

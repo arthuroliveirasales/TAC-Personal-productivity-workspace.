@@ -2,7 +2,6 @@
 import { createPopUpElement } from "./popup.js";
 import { createListElement } from "./list.js";
 import { createNoteElement } from "./note.js";
-import { createRemoveButton } from "./list.js";
 
 export function createCard(card) {
   card = document.createElement("div");
@@ -12,11 +11,10 @@ export function createCard(card) {
   const cardTop = createCardTopElement();
   const title = createTitleElement();
   const optionsContainer = createOptionsContainerElement();
-  const remove = createRemoveButton();
   const popUp = createPopUpElement(card, cardContentElement);
   const options = createOptionsButton(popUp);
   const list = createListElement();
-  const nota = createNoteElement();
+  const note = createNoteElement();
 
   optionsContainer.append(options, popUp);
   cardTop.append(title, optionsContainer);
