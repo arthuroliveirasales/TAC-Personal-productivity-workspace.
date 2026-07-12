@@ -1,0 +1,20 @@
+{
+  "name": "tac-local",
+  "version": "1.0.0",
+  "description": "- HTML\r - CSS\r - JavaScript",
+  "homepage": "https://github.com/arthuroliveirasales/TAC-Personal-productivity-workspace.#readme",
+  "bugs": {
+    "url": "https://github.com/arthuroliveirasales/TAC-Personal-productivity-workspace./issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthuroliveirasales/TAC-Personal-productivity-workspace..git"
+  },
+  "license": "ISC",
+  "author": "Arthur Oliveira Sales",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

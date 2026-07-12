@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
   margin-right: 5px;
   margin-top: 5px;
 }
-.removeButton {
+.remove {
   display: none;
   margin-left: 16px;
   border: none;
@@ -50,7 +50,7 @@ body::-webkit-scrollbar {
   height: 18px;
   width: 20px;
 }
-.removeButton.visible {
+.remove.visible {
   display: inline;
   margin-left: 14px;
   border: none;
@@ -60,11 +60,11 @@ body::-webkit-scrollbar {
   height: 18px;
   width: 20px;
 }
-.removeButton.visible:hover {
+.remove.visible:hover {
   background-color: rgb(255, 224, 224);
   transition: 0.3s;
 }
-.removeButton.visible:active {
+.remove.visible:active {
   background-color: #ff8b8b;
 }
 .removeListContent {
@@ -158,7 +158,7 @@ body::-webkit-scrollbar {
 .optionsContainer {
   position: relative;
 }
-.menuOptions {
+.popUp {
   position: absolute;
   display: none;
   flex-direction: column;
@@ -171,7 +171,7 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
 }
-.menuOptions.visible {
+.popUp.visible {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -184,7 +184,7 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
 }
-.menuOptions button {
+.popUp button {
   background-color: white;
   border: none;
   border-radius: 7px;
@@ -193,11 +193,11 @@ body::-webkit-scrollbar {
   text-align: left;
   color: rgb(0, 0, 0);
 }
-.menuOptions button:hover {
+.popUp button:hover {
   background-color: rgb(226, 226, 226);
   transition: 0.3s;
 }
-.menuOptions button:active {
+.popUp button:active {
   background-color: rgb(201, 201, 201);
 }
 .pageTop {
@@ -422,7 +422,7 @@ body::-webkit-scrollbar {
 .options:active {
   background-color: rgb(177, 177, 177);
 }
-.cardTitle {
+.title {
   border: none;
   background-color: rgb(255, 255, 255);
   height: 20px;

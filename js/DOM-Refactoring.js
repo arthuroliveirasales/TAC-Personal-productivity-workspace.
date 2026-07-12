@@ -1,24 +1,26 @@
 /* geral actions */
 
 document.addEventListener("click", (e) => {
-  if (!e.target.closest(".options", ".popUp")) {
-    popUp.classList.remove("visible");
+  if (!e.target.closest(".options, .popUp")) {
+    document
+      .querySelectorAll(".popUp")
+      .forEach((popUp) => popUp.classList.remove("visible"));
   }
 });
 
 /* =================== */
 
 const createCardTopElement = () => {
-  const cardTop = element.createElement("div");
+  const cardTop = document.createElement("div");
   cardTop.classList.add("cardTop");
 
   return cardTop;
 };
 
-const createTItleElement = () => {
+const createTitleElement = () => {
   const title = document.createElement("input");
   title.classList.add("title");
-  title.placeholder = "Title...";
+  title.placeholder = "Title";
 
   return title;
 };
@@ -64,7 +66,7 @@ const createAddNotesButton = () => {
 
   return addNotes;
 };
-const createUploadFilesButtont = () => {
+const createUploadFilesButton = () => {
   const uploadFiles = document.createElement("button");
   uploadFiles.classList.add("uploadFiles");
   uploadFiles.textContent = "Upload Files";
@@ -104,7 +106,7 @@ const createPopUpElement = (card) => {
   popUp.classList.add("popUp");
 
   popUp.append(
-    createAddListButton(),
+    createAddListButton(cardContentElement),
     createAddNotesButton(),
     createUploadFilesButton(),
     createEditButton(),
@@ -165,13 +167,6 @@ const createCompleteButton = () => {
   return complete;
 };
 
-const createListContentContainerElement = () => {
-  const content = document.createElement("input");
-  content.classList.add("content");
-
-  return content;
-};
-
 const createAddListContentButton = (listContentContainer) => {
   const addListContent = document.createElement("button");
   addListContent.classList.add("addListContent");
@@ -209,7 +204,7 @@ const createCardContentElement = () => {
   const cardContentElement = document.createElement("div");
   cardContentElement.classList.add("cardContentElement");
 
-  return cardContent;
+  return cardContentElement;
 };
 
 const createListElement = () => {
@@ -241,7 +236,7 @@ function createCard(card) {
   const title = createTitleElement();
   const optionsContainer = createOptionsContainerElement();
   const options = createOptionsButton();
-  const popup = createPopupElement();
+  const popup = createPopUpElement(card);
   const list = createListElement();
   const nota = createNoteElement();
 
