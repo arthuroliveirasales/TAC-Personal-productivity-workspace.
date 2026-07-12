@@ -40,6 +40,8 @@ const createAddNotesButton = (cardContentElement) => {
   addNotes.textContent = "Add Notes";
 
   addNotes.addEventListener("click", () => {
+    const noteContainer = createNoteContainerElement();
+
     cardContentElement.append(noteContainer);
 
     /*     note.addEventListener("input", size); */
