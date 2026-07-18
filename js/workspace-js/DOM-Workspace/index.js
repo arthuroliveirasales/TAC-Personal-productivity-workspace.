@@ -14,14 +14,3 @@ document.addEventListener("click", (e) => {
       .forEach((remove) => remove.classList.remove("visible"));
   }
 });
-
-/* =================== */
-/* Add card =========================== */
-import { createCard } from "./card.js";
-
-const cardContainer = document.querySelector(".cardContainer");
-
-const addCard = document.querySelector(".addCard");
-addCard.addEventListener("click", () => {
-  cardContainer.append(createCard());
-});

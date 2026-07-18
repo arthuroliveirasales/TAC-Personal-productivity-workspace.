@@ -3,24 +3,23 @@ import { createPopUpElement } from "./popup.js";
 import { createListElement } from "./list.js";
 import { createNoteElement } from "./note.js";
 
-export function createCard(card) {
-  card = document.createElement("div");
-  card.classList.add("card");
+export function createCardElement(cardData) {
+  const cardElement = document.createElement("div");
+  cardElement.classList.add("card");
+  cardElement.dataset.id = cardData.id;
 
   const cardContentElement = createCardContentElement();
   const cardTop = createCardTopElement();
   const title = createTitleElement();
   const optionsContainer = createOptionsContainerElement();
-  const popUp = createPopUpElement(card, cardContentElement);
+  const popUp = createPopUpElement(cardElement, cardContentElement);
   const options = createOptionsButton(popUp);
-  const list = createListElement();
-  const note = createNoteElement();
 
   optionsContainer.append(options, popUp);
   cardTop.append(title, optionsContainer);
-  card.append(cardTop, cardContentElement);
+  cardElement.append(cardTop, cardContentElement);
 
-  return card;
+  return cardElement;
 }
 export const createCardContentElement = () => {
   const cardContentElement = document.createElement("div");
@@ -28,8 +27,6 @@ export const createCardContentElement = () => {
 
   return cardContentElement;
 };
-
-/* ============================================================= */
 
 /* Options ============================================*/
 
@@ -52,7 +49,6 @@ const createOptionsButton = (popUp) => {
   return options;
 };
 
-/* ==================================================== */
 /* Title ============================================*/
 
 const createCardTopElement = () => {

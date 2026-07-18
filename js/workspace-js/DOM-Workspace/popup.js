@@ -85,10 +85,5 @@ const createDeleteCardButton = (card) => {
   deleteCard.classList.add("deleteCard");
   deleteCard.textContent = "Delete card";
 
-  deleteCard.addEventListener("click", (e) => {
-    e.stopPropagation();
-    card.remove();
-  });
-
   return deleteCard;
 };
