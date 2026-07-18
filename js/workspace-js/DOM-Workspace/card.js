@@ -10,13 +10,13 @@ export function createCardElement(cardData) {
 
   const cardContentElement = createCardContentElement();
   const cardTop = createCardTopElement();
-  const title = createTitleElement();
+  const titleElement = createTitleElement(cardData);
   const optionsContainer = createOptionsContainerElement();
   const popUp = createPopUpElement(cardElement, cardContentElement);
   const options = createOptionsButton(popUp);
 
   optionsContainer.append(options, popUp);
-  cardTop.append(title, optionsContainer);
+  cardTop.append(titleElement, optionsContainer);
   cardElement.append(cardTop, cardContentElement);
 
   return cardElement;
@@ -58,12 +58,12 @@ const createCardTopElement = () => {
   return cardTop;
 };
 
-const createTitleElement = () => {
-  const title = document.createElement("input");
-  title.classList.add("title");
-  title.placeholder = "Title";
-
-  return title;
+const createTitleElement = (cardData) => {
+  const titleElement = document.createElement("input");
+  titleElement.classList.add("title");
+  titleElement.value = cardData.title;
+  titleElement.placeholder = "Title";
+  return titleElement;
 };
 
 /* ====================================================== */
