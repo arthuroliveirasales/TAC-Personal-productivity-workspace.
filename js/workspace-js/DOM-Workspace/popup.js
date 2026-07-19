@@ -33,14 +33,6 @@ const createAddNotesButton = (cardContentElement) => {
   addNotes.classList.add("addNotes");
   addNotes.textContent = "Add Notes";
 
-  addNotes.addEventListener("click", () => {
-    const noteContainer = createNoteContainerElement();
-
-    cardContentElement.append(noteContainer);
-
-    /*     note.addEventListener("input", size); */
-  });
-
   return addNotes;
 };
 const createUploadFilesButton = () => {

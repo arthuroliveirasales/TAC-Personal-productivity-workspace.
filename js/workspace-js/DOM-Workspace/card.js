@@ -1,7 +1,7 @@
 /* create card ====================================== */
 import { createPopUpElement } from "./popup.js";
 import { createListElement } from "./list.js";
-import { createNoteElement } from "./note.js";
+import { createNoteContainerElement } from "./note.js";
 
 export function createCardElement(cardData) {
   const cardElement = document.createElement("div");
@@ -10,8 +10,13 @@ export function createCardElement(cardData) {
 
   const cardContentElement = createCardContentElement();
 
-  cardData.content.forEach((content) => {
-    cardContentElement.append(createListElement(content));
+  cardData.content.forEach((elementData) => {
+    if (elementData.type === "list") {
+      cardContentElement.append(createListElement(elementData));
+    }
+    if (elementData.type === "note") {
+      cardContentElement.append(createNoteContainerElement(elementData));
+    }
   });
 
   const cardTop = createCardTopElement();

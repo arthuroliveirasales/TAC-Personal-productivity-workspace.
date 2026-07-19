@@ -90,6 +90,7 @@ const createCompleteButton = (listData) => {
   if (listData.stat) {
     complete.classList.add("completed");
   }
+
   return complete;
 };
 

@@ -1,9 +1,10 @@
 import { createRemoveButton } from "./shared.js";
 
-export const createNoteElement = () => {
+export const createNoteElement = (noteData) => {
   const note = document.createElement("textarea");
   note.classList.add("note");
   note.placeholder = "Type something...";
+  note.value = noteData.content;
 
   note.addEventListener("input", (e) => {
     e.target.style.height = "auto";
@@ -13,14 +14,16 @@ export const createNoteElement = () => {
   return note;
 };
 
-export const createNoteContainerElement = () => {
+export const createNoteContainerElement = (noteData) => {
   const noteContainer = document.createElement("div");
   noteContainer.classList.add("noteContainer");
 
   const remove = createRemoveButton(noteContainer);
-  const note = createNoteElement();
+  const note = createNoteElement(noteData);
 
   noteContainer.append(note, remove);
+
+  noteContainer.dataset.id = noteData.id;
 
   return noteContainer;
 };

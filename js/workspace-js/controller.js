@@ -6,6 +6,8 @@ import { createCardElement } from "./DOM-Workspace/card.js";
 import { createListElement } from "./DOM-Workspace/list.js";
 import { createListContentAllElement } from "./DOM-Workspace/list.js";
 
+import { createNoteContainerElement } from "./DOM-Workspace/note.js";
+
 /* clearData(); */
 /* Card events ========================================== */
 const cardContainer = document.querySelector(".cardContainer");
@@ -153,7 +155,7 @@ function createListContentData() {
   };
   return newTask;
 }
-
+//task input
 document.addEventListener("input", (e) => {
   const task = e.target.closest(".content");
   if (!task) return;
@@ -180,6 +182,7 @@ document.addEventListener("input", (e) => {
 
   saveData(cards);
 });
+//stat btn
 document.addEventListener("click", (e) => {
   const statBtn = e.target.closest(".complete");
   if (!statBtn) return;
@@ -246,6 +249,8 @@ document.addEventListener("click", (e) => {
   if (!remove) return;
 
   const listElement = remove.closest(".list");
+  if (!listElement) return;
+
   const listId = listElement.dataset.id;
 
   const cardElement = remove.closest(".card");
@@ -261,3 +266,77 @@ document.addEventListener("click", (e) => {
   listElement.remove();
 });
 /* =================================================================== */
+/* Note Events ================================================================ */
+
+document.addEventListener("click", (e) => {
+  const addNotes = e.target.closest(".addNotes");
+  if (!addNotes) return;
+
+  const cardElement = addNotes.closest(".card");
+  const cardContentElement = cardElement.querySelector(".cardContentElement");
+  const cardId = cardElement.dataset.id;
+
+  const card = cards.find((card) => card.id === cardId);
+  if (!card) return;
+
+  const noteData = createNoteData();
+
+  card.content.push(noteData);
+
+  saveData(cards);
+
+  cardContentElement.append(createNoteContainerElement(noteData));
+});
+
+function createNoteData() {
+  const noteData = {
+    id: crypto.randomUUID(),
+    type: "note",
+    content: "",
+  };
+
+  return noteData;
+}
+
+document.addEventListener("input", (e) => {
+  const note = e.target.closest(".note");
+  if (!note) return;
+
+  const noteContainerElement = note.closest(".noteContainer");
+  const noteId = noteContainerElement.dataset.id;
+
+  const cardElement = note.closest(".card");
+  const cardId = cardElement.dataset.id;
+
+  const card = cards.find((card) => card.id === cardId);
+  if (!card) return;
+
+  const noteData = card.content.find((note) => note.id === noteId);
+  if (!noteData) return;
+
+  noteData.content = note.value;
+  console.log("testes14124");
+  saveData(cards);
+});
+document.addEventListener("click", (e) => {
+  const remove = e.target.closest(".remove");
+
+  if (!remove) return;
+
+  const noteContainerElement = remove.closest(".noteContainer");
+
+  if (!noteContainerElement) return;
+  const noteId = noteContainerElement.dataset.id;
+
+  const cardElement = remove.closest(".card");
+  const cardId = cardElement.dataset.id;
+
+  const card = cards.find((card) => card.id === cardId);
+  if (!card) return;
+
+  card.content = card.content.filter((content) => content.id !== noteId);
+
+  saveData(cards);
+
+  noteContainerElement.remove();
+});
