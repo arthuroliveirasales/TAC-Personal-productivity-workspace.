@@ -25,12 +25,6 @@ const createAddListButton = (cardContentElement) => {
   addList.classList.add("addList");
   addList.textContent = "Add List";
 
-  addList.addEventListener("click", () => {
-    const list = createListElement();
-
-    cardContentElement.append(list);
-  });
-
   return addList;
 };
 

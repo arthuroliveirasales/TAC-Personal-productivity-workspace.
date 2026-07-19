@@ -3,9 +3,5 @@ export const createRemoveButton = (element) => {
   remove.classList.add("remove");
   remove.textContent = "-";
 
-  remove.addEventListener("click", () => {
-    element.remove();
-  });
-
   return remove;
 };

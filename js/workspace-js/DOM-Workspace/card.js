@@ -9,6 +9,11 @@ export function createCardElement(cardData) {
   cardElement.dataset.id = cardData.id;
 
   const cardContentElement = createCardContentElement();
+
+  cardData.content.forEach((content) => {
+    cardContentElement.append(createListElement(content));
+  });
+
   const cardTop = createCardTopElement();
   const titleElement = createTitleElement(cardData);
   const optionsContainer = createOptionsContainerElement();
