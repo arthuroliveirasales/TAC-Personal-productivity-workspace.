@@ -67,7 +67,7 @@ document.addEventListener("input", (e) => {
 /* ================================================================ */
 
 /* list events =====================================================*/
-
+//add list
 document.addEventListener("click", (e) => {
   const addList = e.target.closest(".addList");
   if (!addList) return;
@@ -98,7 +98,7 @@ function createListData() {
 
   return listData;
 }
-
+//list title
 document.addEventListener("input", (e) => {
   const listTitle = e.target.closest(".listTitle");
   if (!listTitle) return;
@@ -118,7 +118,7 @@ document.addEventListener("input", (e) => {
   list.title = listTitle.value;
   saveData(cards);
 });
-
+//add list content/task
 document.addEventListener("click", (e) => {
   const addListContent = e.target.closest(".addListContent");
   if (!addListContent) return;
@@ -143,16 +143,73 @@ document.addEventListener("click", (e) => {
 
   saveData(cards);
 
-  listContentContainer.append(createListContentAllElement());
+  listContentContainer.append(createListContentAllElement(newTask));
 });
 function createListContentData() {
   const newTask = {
+    id: crypto.randomUUID(),
     content: "",
     stat: false,
   };
   return newTask;
 }
 
+document.addEventListener("input", (e) => {
+  const task = e.target.closest(".content");
+  if (!task) return;
+
+  const listElement = task.closest(".list");
+  const listId = listElement.dataset.id;
+
+  const taskElement = task.closest(".contentCompleteContainer");
+  const taskId = taskElement.dataset.id;
+
+  const cardElement = task.closest(".card");
+  const cardId = cardElement.dataset.id;
+
+  const card = cards.find((card) => card.id === cardId);
+  if (!card) return;
+
+  const list = card.content.find((list) => list.id === listId);
+  if (!list) return;
+
+  const taskData = list.content.find((task) => task.id === taskId);
+  if (!taskData) return;
+
+  taskData.content = task.value;
+
+  saveData(cards);
+});
+document.addEventListener("click", (e) => {
+  const statBtn = e.target.closest(".complete");
+  if (!statBtn) return;
+
+  const listElement = statBtn.closest(".list");
+  const listId = listElement.dataset.id;
+
+  const taskElement = statBtn.closest(".contentCompleteContainer");
+  const taskId = taskElement.dataset.id;
+
+  const cardElement = statBtn.closest(".card");
+  const cardId = cardElement.dataset.id;
+
+  const card = cards.find((card) => card.id === cardId);
+  if (!card) return;
+
+  const list = card.content.find((list) => list.id === listId);
+  if (!list) return;
+
+  const taskData = list.content.find((task) => task.id === taskId);
+  if (!taskData) return;
+
+  taskData.stat = !taskData.stat;
+
+  statBtn.classList.toggle("completed", taskData.stat);
+
+  saveData(cards);
+});
+
+//remove list content/task
 document.addEventListener("click", (e) => {
   const removeListContent = e.target.closest(".removeListContent");
   if (!removeListContent) return;
@@ -182,6 +239,7 @@ document.addEventListener("click", (e) => {
 
   lastContent.remove();
 });
+//remove list
 document.addEventListener("click", (e) => {
   const remove = e.target.closest(".remove");
 

@@ -15,7 +15,7 @@ export const createListElement = (listData) => {
   list.dataset.id = listData.id;
 
   listData.content.forEach((task) => {
-    listContentContainer.append(createListContentAllElement());
+    listContentContainer.append(createListContentAllElement(task));
   });
 
   return list;
@@ -41,12 +41,16 @@ const createAddListContentButton = () => {
   return addListContent;
 };
 
-export function createListContentAllElement() {
+export function createListContentAllElement(newTask) {
   const contentCompleteContainer = createContentCompleteContainerElement();
-  const content = createContentElement();
-  const complete = createCompleteButton();
+  const content = createContentElement(newTask);
+  const complete = createCompleteButton(newTask);
 
   contentCompleteContainer.append(content, complete);
+
+  contentCompleteContainer.dataset.id = newTask.id;
+  content.value = newTask.content;
+  complete.value = newTask.stat;
 
   return contentCompleteContainer;
 }
@@ -55,14 +59,6 @@ const createRemoveListContentButton = (listContentContainer) => {
   const removeListContent = document.createElement("button");
   removeListContent.classList.add("removeListContent");
   removeListContent.textContent = "- Remove";
-  /* 
-  removeListContent.addEventListener("click", () => {
-    const lastContent = listContentContainer.lastElementChild;
-
-    if (lastContent) {
-      lastContent.remove();
-    }
-  }); */
 
   return removeListContent;
 };
@@ -87,22 +83,13 @@ const createListContentContainerElement = () => {
   return listContentContainer;
 };
 
-const createListContentElement = (listData) => {
-  const content = document.createElement("input");
-  content.classList.add("content");
-  content.value = listData.content.content;
-
-  return content;
-};
-
-const createCompleteButton = () => {
+const createCompleteButton = (listData) => {
   const complete = document.createElement("button");
   complete.classList.add("complete");
 
-  complete.addEventListener("click", () => {
-    complete.classList.toggle("completed");
-  });
-
+  if (listData.stat) {
+    complete.classList.add("completed");
+  }
   return complete;
 };
 
@@ -121,7 +108,7 @@ const createContentCompleteContainerElement = () => {
   return contentCompleteContainer;
 };
 
-const createContentElement = () => {
+const createContentElement = (newTask) => {
   const content = document.createElement("input");
   content.classList.add("content");
 
