@@ -1,0 +1,67 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 300px;
+  border: 0.1px solid rgb(216, 216, 216);
+  border-radius: 10px;
+  gap: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.card:hover {
+  border: 1px solid rgb(202, 202, 202);
+}
+
+.cardTop {
+  display: flex;
+  width: 100%;
+}
+
+.cardContentElement {
+  display: flex;
+  flex-direction: column;
+  width: 290px;
+  border-top: 1px solid rgb(199, 199, 199);
+
+  min-height: 260px;
+  max-height: 260px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cardContentElement::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  height: 20px;
+  width: 267px;
+}
+
+.optionsContainer {
+  position: relative;
+}
+
+.options {
+  margin-right: auto;
+  border: none;
+  background-color: white;
+  border-radius: 4px;
+  height: 20px;
+  width: 22px;
+}
+
+.options:hover {
+  background-color: rgb(231, 231, 231);
+  transition: 0.3s;
+}
+
+.options:active {
+  background-color: rgb(177, 177, 177);
+}

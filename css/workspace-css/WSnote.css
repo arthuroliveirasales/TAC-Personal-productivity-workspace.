@@ -1,0 +1,24 @@
+.noteContainer {
+  display: flex;
+  resize: none;
+  overflow: hidden;
+  border: 1px solid rgb(223, 223, 223);
+  max-height: 288px;
+  min-height: 20px;
+  width: 288px;
+  border-radius: 4px;
+  outline: 1px solid rgb(230, 230, 230);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.note {
+  resize: none;
+  overflow: hidden;
+  border: none;
+  max-height: 250px;
+  min-height: 20px;
+  width: 288px;
+  border-radius: 4px;
+  outline: none;
+}

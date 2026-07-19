@@ -1,0 +1,143 @@
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.topList {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 10px;
+  width: 288px;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.listTitle {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  margin-left: 4px;
+  margin-top: 4px;
+  height: 19px;
+  width: 254px;
+}
+
+.listTitle:hover {
+  background-color: rgb(233, 233, 233);
+  transition: 0.2s;
+}
+
+.listContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 14px;
+}
+
+.listContent {
+  display: flex;
+  margin-left: 10px;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.content {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-bottom: 1px solid black;
+  width: 240px;
+}
+
+.content:hover {
+  background-color: rgb(236, 236, 236);
+  transition: 0.2s;
+}
+
+.content.completed {
+  opacity: 0.6;
+}
+
+.complete {
+  border-radius: 50px;
+  border: 1px solid rgb(182, 182, 182);
+  height: 16px;
+  width: 16px;
+}
+
+.complete:hover {
+  background-color: rgb(204, 204, 204);
+}
+
+.complete:active {
+  background-color: rgb(165, 165, 165);
+}
+
+.complete.completed {
+  background-color: oklch(82.8% 0.111 230.318);
+  text-align: center;
+}
+
+.inputContentContainer button {
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.addListContent {
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: rgb(104, 104, 104);
+}
+
+.addListContent:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.addListContent:active {
+  background-color: rgb(214, 214, 214);
+}
+
+.removeListContent {
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: rgb(104, 104, 104);
+}
+
+.removeListContent:hover {
+  background-color: rgb(226, 226, 226);
+  color: rgb(255, 108, 108);
+  transition: 0.1s;
+}
+
+.removeListContent:active {
+  background-color: rgb(214, 214, 214);
+  color: rgb(255, 40, 40);
+}

@@ -1,0 +1,54 @@
+.pageTop {
+  display: flex;
+}
+
+.userWorkSpace {
+  display: flex;
+  border: 1px solid rgb(226, 226, 226);
+  background-color: white;
+  border-radius: 5px;
+  width: 300px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.userWorkSpace:hover {
+  background-color: rgb(224, 224, 224);
+}
+
+.userWorkSpace:active {
+  background-color: rgb(180, 180, 180);
+}
+
+.userName {
+  width: 180px;
+  margin-right: 47%;
+}
+
+.userImg {
+  margin-right: auto;
+}
+
+.searchBarrAll {
+  display: flex;
+  background-color: white;
+  width: 300px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 5px;
+  align-items: center;
+}
+
+.lupa {
+  margin-left: 36%;
+  height: 16px;
+}
+
+.lupa:hover {
+  opacity: 0.3;
+  transition: 0.2s;
+}
+
+.searchBarr {
+  border: none;
+}

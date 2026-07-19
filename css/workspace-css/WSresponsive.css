@@ -1,0 +1,52 @@
+@media screen and (max-width: 590px) {
+  .pageTop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 477px) {
+  .canal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .spaceWorkTop {
+    display: flex;
+    border: 1px solid rgb(221, 221, 221);
+    flex-direction: column;
+    gap: 5px;
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 20px;
+    min-height: 586px;
+    max-height: 586px;
+    overflow-y: scroll;
+    border-top: 1px solid rgb(209, 209, 209);
+  }
+
+  .addCard {
+    margin-left: 0;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 300px;
+    border: 0.1px solid rgb(216, 216, 216);
+    border-radius: 10px;
+    gap: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+}

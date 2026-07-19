@@ -1,0 +1,36 @@
+.popUp {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 10px;
+  width: 230px;
+  height: 150px;
+  gap: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.popUp.visible {
+  display: flex;
+}
+
+.popUp button {
+  background-color: white;
+  border: none;
+  border-radius: 7px;
+  width: 210px;
+  height: 22px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.popUp button:hover {
+  background-color: rgb(226, 226, 226);
+  transition: 0.3s;
+}
+
+.popUp button:active {
+  background-color: rgb(201, 201, 201);
+}

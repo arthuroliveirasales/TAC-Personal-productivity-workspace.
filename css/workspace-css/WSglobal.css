@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(247, 247, 247);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+input {
+  outline: none;
+}
+
+.setaExpandir {
+  margin-left: 0;
+  height: 15px;
+}
