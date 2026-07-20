@@ -8,6 +8,8 @@ import { createListContentAllElement } from "./DOM-Workspace/list.js";
 
 import { createNoteContainerElement } from "./DOM-Workspace/note.js";
 
+import { initSidebar } from "./DOM-Sidebar/opensidebar.js";
+initSidebar();
 /* clearData(); */
 /* Card events ========================================== */
 const cardContainer = document.querySelector(".cardContainer");

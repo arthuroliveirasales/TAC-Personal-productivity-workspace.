@@ -12,14 +12,3 @@
 @import "./workspace-css/WSbutton.css";
 
 @import "./workspace-css/WSresponsive.css";
-
-body {
-  background-color: rgb(247, 247, 247);
-}
-body::-webkit-scrollbar {
-  display: none;
-}
-.setaExpandir {
-  margin-left: 0;
-  height: 15px;
-}
