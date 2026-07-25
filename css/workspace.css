@@ -2,13 +2,13 @@
 
 @import "./workspace-css/WSpageTop.css";
 @import "./workspace-css/WSNavebar.css";
-@import "./workspace-css/WSworkSpace.css";
-@import "./workspace-css/WSworkSpaceTop.css";
+@import "./workspace-css/WSworkspace.css";
+@import "./workspace-css/WSworkspaceTop.css";
 
 @import "./workspace-css/WScard.css";
 @import "./workspace-css/WSlist.css";
 @import "./workspace-css/WSnote.css";
-@import "./workspace-css/WSpopup.css";
+@import "./workspace-css/WSpopUp.css";
 @import "./workspace-css/WSbutton.css";
 
 @import "./workspace-css/WSresponsive.css";
