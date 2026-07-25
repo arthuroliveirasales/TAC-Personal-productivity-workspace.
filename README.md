@@ -8,9 +8,7 @@
 
 ## Do now
 
-- Storage: save, get, delete.
-- DOM: render, remove element.
-- Controller.
+- navbar
 
 ## Features
 
