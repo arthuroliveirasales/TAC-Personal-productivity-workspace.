@@ -2,8 +2,8 @@
 
 @import "./dashboard-css/DBpageTop.css";
 @import "./dashboard-css/DBNavebar.css";
-@import "./dashboard-css/DBworkspace.css";
-@import "./dashboard-css/DBworkspaceTop.css";
+
+@import "./dashboard-css/DBresponsive.css";
 
 /* workspace */
 @import "./dashboard-css/workspace-css/WScard.css";
@@ -11,11 +11,15 @@
 @import "./dashboard-css/workspace-css/WSnote.css";
 @import "./dashboard-css/workspace-css/WSpopUp.css";
 @import "./dashboard-css/workspace-css/WSbutton.css";
+@import "./dashboard-css/workspace-css/DBworkspace.css";
+@import "./dashboard-css/workspace-css/DBworkspaceTop.css";
 
 /* planner */
 @import "./dashboard-css/planner-css/plannerIntroduce.css";
 @import "./dashboard-css/planner-css/plannerTop.css";
 @import "./dashboard-css/planner-css/weekly.css";
 @import "./dashboard-css/planner-css/utilities.css";
-
-@import "./dashboard-css/DBresponsive.css";
+@import "./dashboard-css/planner-css/miniMonth.css";
+@import "./dashboard-css/planner-css/dailyTasks.css";
+@import "./dashboard-css/planner-css/priorities.css";
+@import "./dashboard-css/planner-css/quickNotes.css";

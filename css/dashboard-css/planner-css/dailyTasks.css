@@ -1,0 +1,40 @@
+.dailyTasks {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  gap: 13px;
+}
+.dayQuant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(231, 226, 253);
+  height: 20px;
+  width: 23px;
+}
+.dayQuant span {
+  color: rgb(0, 119, 255);
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+}
+.utilityElementsHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  height: 10px;
+}
+.utilityElementsHeader h3 {
+  font-size: 0.97em;
+}
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 4px;
+}

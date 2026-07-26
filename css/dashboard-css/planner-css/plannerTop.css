@@ -1,3 +1,24 @@
+/* planner content (main) */
+.plannerContent {
+  display: block;
+  animation: easeIn 0.4s ease;
+  animation-fill-mode: forwards;
+}
+.plannerContent.defocus {
+  display: none;
+}
+
+@keyframes easeIn {
+  from {
+    transform: scale(0.997);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*  */
 .plannerTop {
   display: flex;
   align-items: center;
@@ -14,14 +35,15 @@
 .plannerTopLeftButton {
   display: flex;
   border: none;
+  box-shadow: 0 0 20px rgb(144, 192, 255);
   border-radius: 6px;
   margin: 10px;
-  height: 25px;
+  height: 30px;
   justify-content: center;
   align-items: center;
   gap: 3px;
   transition: 0.3s ease;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 .plannerTopLeftButton:hover {
   background-color: rgb(230, 230, 230);

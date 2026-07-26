@@ -1,4 +1,7 @@
 .plannerIntroducePage {
+  display: block;
+}
+.plannerIntroducePage.defocus {
   display: none;
 }
 .plannerH1 {

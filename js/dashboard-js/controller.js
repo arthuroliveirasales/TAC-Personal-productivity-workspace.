@@ -10,7 +10,9 @@ import { createNoteContainerElement } from "./DOM-Workspace/note.js";
 
 import { initSidebar } from "./DOM-navebar/opensidebar.js";
 initSidebar();
-
+/* planner buttons events */
+import { openPlannerAction } from "./DOM-planner/plannerIntroduce.js";
+openPlannerAction();
 /* navbar buttons events */
 import { plannerButtonClick } from "./DOM-navebar/navbarButtons.js";
 import { startButtonClick } from "./DOM-navebar/navbarButtons.js";

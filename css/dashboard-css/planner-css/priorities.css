@@ -1,0 +1,32 @@
+.priorities {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 13px;
+}
+.priorities.utilityCard {
+  margin: 0;
+}
+.priorityList {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4px;
+  gap: 10px;
+}
+.priorityList div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+}
+.priorityDot {
+  display: flex;
+  height: 10px;
+  width: 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(250, 40, 40);
+}

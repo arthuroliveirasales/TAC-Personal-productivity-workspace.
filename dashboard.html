@@ -10,6 +10,12 @@
       href="assets/icons/home/TAC-favicon.png"
       type="image/png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="pageTop">
@@ -60,7 +66,7 @@
         </button>
       </aside>
       <aside class="sidebar">Feature!</aside>
-      <section class="workspaceAll defocus" id="workspaceAll">
+      <section class="workspaceAll" id="workspaceAll">
         <div class="spaceWorkTop">
           <button type="button" class="spaceWorkTitle">
             <img
@@ -147,7 +153,7 @@
           <div class="cardContainer"></div>
         </div>
       </section>
-      <section class="plannerAll" id="plannerAll">
+      <section class="plannerAll defocus" id="plannerAll">
         <section class="plannerIntroducePage">
           <h1 class="plannerH1">
             Plan your week, organize appointments, and stay on track.
@@ -156,11 +162,16 @@
             A simple space to organize your daily plans, write notes, and keep
             track of your important events throughout the week.
           </p>
-          <button type="button" class="openPlanner">Plan My Week</button>
+          <button type="button" class="openPlanner">Get Started</button>
         </section>
-        <section class="plannerContent">
+        <section class="plannerContent defocus">
           <div class="plannerTop">
             <button class="plannerTopLeftButton">
+              <img
+                src="assets/icons/dashboard/planner-icon.png"
+                alt="planner icon"
+                width="25"
+              />
               <p class="weeklyPlannerH1">Weekly Planner</p>
               <img
                 class="weeklyPlannerImage"
@@ -271,9 +282,91 @@
                 <div></div>
                 <div></div>
               </div>
-              <div class="plannerUtilities"></div>
             </section>
-            <section class="monthlyPlanner"></section>
+            <section class="plannerUtilities">
+              <div class="miniMonth">
+                <div class="calendarHeader">
+                  <span class="monthName">Julho 2026</span>
+                  <button id="leftToggleButton"><</button><button>></button>
+                </div>
+
+                <div class="weekDays">
+                  <span>S</span>
+                  <span>M</span>
+                  <span>T</span>
+                  <span>W</span>
+                  <span>T</span>
+                  <span>F</span>
+                  <span>S</span>
+                </div>
+
+                <div class="daysGrid"></div>
+              </div>
+              <div class="dailyTasks">
+                <div class="utilityElementsHeader">
+                  <h3>Tasks for the day</h3>
+                  <div class="dayQuant">
+                    <span>4</span>
+                  </div>
+                </div>
+
+                <div class="taskList">
+                  <label>
+                    <input type="checkbox" />
+                    Finalizar Weekly Planner
+                  </label>
+
+                  <label>
+                    <input type="checkbox" />
+                    Commit no GitHub
+                  </label>
+
+                  <label>
+                    <input type="checkbox" />
+                    Estudar Matemática
+                  </label>
+
+                  <label>
+                    <input type="checkbox" />
+                    Responder e-mails
+                  </label>
+                </div>
+              </div>
+              <div class="priorities">
+                <div class="priorities utilityCard">
+                  <div class="utilityElementsHeader">
+                    <h3>Priorities</h3>
+                  </div>
+
+                  <div class="priorityList">
+                    <div class="priority high">
+                      <span class="priorityDot"></span>
+                      <p>Weekly Planner</p>
+                    </div>
+
+                    <div class="priority medium">
+                      <span class="priorityDot"></span>
+                      <p>Design Calendar</p>
+                    </div>
+
+                    <div class="priority low">
+                      <span class="priorityDot"></span>
+                      <p>README</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="quickNotes">
+                <div class="quickNotes utilityCard">
+                  <div class="utilityElementsHeader">
+                    <h3>Quick Notes</h3>
+                  </div>
+
+                  <textarea placeholder="Write something..." spellcheck="false">
+                  </textarea>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
       </section>

@@ -1,0 +1,13 @@
+.plannerUtilities {
+  height: 550px;
+  width: 300px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  padding-top: 0;
+  gap: 16px;
+}
+.plannerUtilities > * {
+  font-family: "Inter", sans-serif;
+}
