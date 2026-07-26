@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  margin-left: 8px;
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
   margin-top: 5px;
@@ -62,4 +63,56 @@
   align-items: center;
   justify-content: center;
   color: rgb(0, 0, 0);
+}
+
+/* open start button */
+
+.startButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: white;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  transition: transform 0.4s ease;
+}
+.startButton:hover {
+  transform: scale(1.1);
+}
+.startButton:active {
+  opacity: 0.7;
+  transform: scaleY(1.1);
+}
+/* open planner button */
+
+.plannerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: white;
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  transition: transform 0.4s ease;
+}
+.plannerButton:hover {
+  transform: scale(1.1);
+}
+.plannerButton:active {
+  opacity: 0.7;
+}
+.plannerButton.actived {
+  border: 2px solid rgb(160, 160, 160);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(255, 230, 0);
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  transition: transform 0.4s ease;
 }

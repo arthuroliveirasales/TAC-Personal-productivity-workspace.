@@ -1,0 +1,38 @@
+.weeklyPlanner {
+  width: 1000px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weekday {
+  display: flex;
+  width: 880px;
+  justify-content: space-between;
+}
+.weekday div p {
+  font-family: sans-serif;
+}
+.weekday div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dailyBoxs {
+  width: 970px;
+  height: 485px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(236, 236, 236);
+}
+.dailyBoxs div {
+  width: 138px;
+  height: 485px;
+  border: 1px solid rgb(236, 235, 235);
+}
+.dailyText div textarea {
+  width: 133px;
+}

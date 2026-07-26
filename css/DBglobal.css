@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(247, 247, 247);
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+input {
+  outline: none;
+}
+
+.setaExpandir {
+  margin-left: 0;
+  height: 15px;
+}
+.mainLayout {
+  display: flex;
+}
+/* workspace */
+.workspaceAll {
+  display: block;
+  flex: 1;
+  animation: easeIn 0.8s ease;
+  animation-fill-mode: forwards;
+}
+.workspaceAll.defocus {
+  display: none;
+}
+@keyframes easeIn {
+  from {
+    opacity: 0.5;
+    transform: scale(0.998);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* plannerAll */
+.plannerAll {
+  display: block;
+  flex: 1;
+  height: 730px;
+}
+.plannerAll.defocus {
+  display: none;
+}

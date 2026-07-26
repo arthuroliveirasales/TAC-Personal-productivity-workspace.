@@ -1,0 +1,21 @@
+@import "./DBglobal.css";
+
+@import "./dashboard-css/DBpageTop.css";
+@import "./dashboard-css/DBNavebar.css";
+@import "./dashboard-css/DBworkspace.css";
+@import "./dashboard-css/DBworkspaceTop.css";
+
+/* workspace */
+@import "./dashboard-css/workspace-css/WScard.css";
+@import "./dashboard-css/workspace-css/WSlist.css";
+@import "./dashboard-css/workspace-css/WSnote.css";
+@import "./dashboard-css/workspace-css/WSpopUp.css";
+@import "./dashboard-css/workspace-css/WSbutton.css";
+
+/* planner */
+@import "./dashboard-css/planner-css/plannerIntroduce.css";
+@import "./dashboard-css/planner-css/plannerTop.css";
+@import "./dashboard-css/planner-css/weekly.css";
+@import "./dashboard-css/planner-css/utilities.css";
+
+@import "./dashboard-css/DBresponsive.css";

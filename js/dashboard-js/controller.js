@@ -8,9 +8,15 @@ import { createListContentAllElement } from "./DOM-Workspace/list.js";
 
 import { createNoteContainerElement } from "./DOM-Workspace/note.js";
 
-import { initSidebar } from "./DOM-Sidebar/opensidebar.js";
+import { initSidebar } from "./DOM-navebar/opensidebar.js";
 initSidebar();
-/* clearData(); */
+
+/* navbar buttons events */
+import { plannerButtonClick } from "./DOM-navebar/navbarButtons.js";
+import { startButtonClick } from "./DOM-navebar/navbarButtons.js";
+
+plannerButtonClick();
+startButtonClick();
 /* Card events ========================================== */
 const cardContainer = document.querySelector(".cardContainer");
 

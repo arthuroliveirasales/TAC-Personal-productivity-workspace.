@@ -1,0 +1,54 @@
+.plannerIntroducePage {
+  display: none;
+}
+.plannerH1 {
+  margin-left: 100px;
+  margin-top: 100px;
+  font-size: 3em;
+  font-family: Verdana, sans-serif;
+  max-width: 500px;
+  animation: title 1s ease;
+  animation-fill-mode: forwards;
+}
+.plannerP {
+  max-width: 500px;
+  margin-left: 100px;
+  font-size: 1.1em;
+  color: gray;
+}
+.openPlanner {
+  margin-left: 100px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 7px;
+  height: 36px;
+  width: 114px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  border: 1px solid black;
+  transition: 0.3s ease;
+}
+.openPlanner:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(209, 209, 209);
+}
+.openPlanner:active {
+  transform: scale(0.8);
+  background-color: antiquewhite;
+  color: gray;
+}
+@keyframes title {
+  from {
+    opacity: 0.5;
+    margin-top: 70px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 100px;
+  }
+}
