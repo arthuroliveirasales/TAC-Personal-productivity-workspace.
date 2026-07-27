@@ -1,14 +1,13 @@
 .navbar {
-  width: 50px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  margin-left: 8px;
-  background-color: rgb(0, 0, 0);
-  border-radius: 10px;
-  margin-top: 5px;
+  background-color: #040d2c;
+  border-bottom-right-radius: 30px;
   transition: width 0.2s ease;
 }
+
 /* .navbar:hover {
   width: 50px;
   flex-shrink: 0;
@@ -17,16 +16,23 @@
   margin-top: 5px;
 } */
 
+/* TACIcon */
+.TACIcon {
+  margin-left: 10px;
+  margin-top: 10px;
+}
 /* open sidebar button ============================== */
 .openSidebar {
-  border: 2px solid rgb(99, 99, 99);
-  border-radius: 5px;
-  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(70, 3, 255);
   color: white;
-  height: 30px;
-  width: 30px;
+  height: 44px;
+  width: 140px;
   margin: 10px;
   transition: transform 0.4s ease;
+  margin-top: 30px;
+  align-self: center;
 }
 .openSidebar:hover {
   transform: scale(1.1);
@@ -35,14 +41,17 @@
   opacity: 0.7;
 }
 .openSidebar.actived {
-  border: 2px solid rgb(160, 160, 160);
-  border-radius: 5px;
-  background-color: transparent;
-  color: rgb(255, 230, 0);
-  height: 30px;
+  border: none;
+  border-radius: 10px;
   width: 30px;
+  background-color: rgb(70, 3, 255);
+  color: rgb(255, 230, 0);
+  height: 44px;
+  width: 140px;
   margin: 10px;
   transition: transform 0.4s ease;
+  margin-top: 30px;
+  align-self: center;
 }
 
 /* sidebar =================== */
@@ -77,7 +86,9 @@
   height: 30px;
   width: 30px;
   margin: 10px;
+  gap: 10px;
   transition: transform 0.4s ease;
+  margin-left: 70px;
 }
 .startButton:hover {
   transform: scale(1.1);
@@ -98,7 +109,9 @@
   height: 30px;
   width: 30px;
   margin: 10px;
+  gap: 10px;
   transition: transform 0.4s ease;
+  margin-left: 70px;
 }
 .plannerButton:hover {
   transform: scale(1.1);
