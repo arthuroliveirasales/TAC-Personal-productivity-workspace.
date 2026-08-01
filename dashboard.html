@@ -18,34 +18,6 @@
     />
   </head>
   <body>
-    <div class="pageTop">
-      <button type="button" class="userWorkSpace">
-        <img
-          src="assets/icons/dashboard/user.png"
-          alt="userImg"
-          width="20px"
-          class="userImg"
-        />
-        <span class="userName">User's WorkSpace</span>
-        <img
-          src="assets/icons/dashboard/setaExpandir.png"
-          alt="setaExpandir"
-          width="14px"
-          class="setaExpandir"
-        />
-      </button>
-
-      <div class="searchBarrAll">
-        <input type="text" placeholder="Search" class="searchBarr" />
-        <img
-          src="assets/icons/dashboard/lupa.png"
-          alt="lupa"
-          width="14px"
-          class="lupa"
-        />
-      </div>
-    </div>
-
     <div class="mainLayout">
       <aside class="navbar">
         <img
@@ -54,7 +26,14 @@
           alt="TAC logo"
           width="110"
         />
-        <button type="button" class="openSidebar">+</button>
+        <button type="button" class="openSidebar">
+          <img
+            class="openSideBarImg"
+            src="assets/icons/dashboard/open-sidebar.png"
+            alt="start"
+            width="38px"
+          />
+        </button>
         <button type="button" class="startButton">
           <img
             class="startButtonImage"
@@ -72,16 +51,16 @@
         </button>
       </aside>
       <aside class="sidebar">Feature!</aside>
-      <section class="workspaceAll" id="workspaceAll">
-        <div class="spaceWorkTop">
-          <button type="button" class="spaceWorkTitle">
+      <div class="AllContent">
+        <div class="pageTop">
+          <button type="button" class="userWorkSpace">
             <img
-              src="assets/icons/dashboard/workspace.png"
-              alt="workspaceIcon"
-              width="19px"
-              class="workspaceIcon"
+              src="assets/icons/dashboard/user.png"
+              alt="userImg"
+              width="20px"
+              class="userImg"
             />
-            <span>Team Space</span>
+            <span class="userName">User's WorkSpace</span>
             <img
               src="assets/icons/dashboard/setaExpandir.png"
               alt="setaExpandir"
@@ -90,292 +69,353 @@
             />
           </button>
 
-          <div class="canal">
-            <button type="button" class="overview">
-              <img
-                src="assets/icons/dashboard/overView.png"
-                class="overViewImg"
-                width="14px"
-              />
-              <span>Overview</span>
-            </button>
-            <button type="button" class="topList">
-              <img
-                src="assets/icons/dashboard/list.png"
-                class="listImg"
-                width="14px"
-              />
-              <span>List</span>
-            </button>
-            <button type="button" class="calendar">
-              <img
-                src="assets/icons/dashboard/calendar.png"
-                class="calendarImg"
-                width="13px"
-              />
-              <span>Calendar</span>
-            </button>
-            <button type="button" class="board">
-              <img
-                src="assets/icons/dashboard/board.png"
-                class="boardImg"
-                width="14px"
-              />
-              <span>Board</span>
-            </button>
-            <button type="button" class="gantt">
-              <img
-                src="assets/icons/dashboard/gantt.png"
-                class="ganttImg"
-                width="14px"
-              />
-              <span>Gantt</span>
-            </button>
-            <button type="button" class="table">
-              <img
-                src="assets/icons/dashboard/table.png"
-                class="tableImg"
-                width="14px"
-              />
-              <span>Table</span>
-            </button>
+          <div class="searchBarrAll">
+            <input type="text" placeholder="Search" class="searchBarr" />
+            <img
+              src="assets/icons/dashboard/lupa.png"
+              alt="lupa"
+              width="14px"
+              class="lupa"
+            />
           </div>
-        </div>
 
-        <div class="spaceWork">
-          <div class="addCardAndFilters">
-            <button type="button" class="filtersContainer">
-              <img
-                src="assets/icons/dashboard/filter.png"
-                class="filterImg"
-                alt="filterImg"
-                width="16px"
-                height="16px"
-              />
-              <span>Filters</span>
-            </button>
-            <button type="button" class="addCard">Add card</button>
-          </div>
-          <div class="cardContainer"></div>
+          <button class="topRigthButton" id="notificationTopButton">
+            <img
+              src="assets/icons/dashboard/notification-top.png"
+              alt="notification bell"
+              width="20px"
+            />
+          </button>
+          <button class="topRigthButton" id="helpTopButton">
+            <img
+              src="assets/icons/dashboard/help.png"
+              alt="help"
+              width="20px"
+            />
+          </button>
+          <button class="topRigthButton" id="settingsTopButton">
+            <img
+              src="assets/icons/dashboard/settings.png"
+              alt="settings"
+              width="20px"
+            />
+          </button>
+          <button class="topRigthButton" id="userProfile">
+            <img
+              src="assets/icons/dashboard/user.png"
+              alt="user"
+              width="23px"
+            />
+          </button>
         </div>
-      </section>
-      <section class="plannerAll defocus" id="plannerAll">
-        <section class="plannerIntroducePage">
-          <h1 class="plannerH1">
-            Plan your week, organize appointments, and stay on track.
-          </h1>
-          <p class="plannerP">
-            A simple space to organize your daily plans, write notes, and keep
-            track of your important events throughout the week.
-          </p>
-          <button type="button" class="openPlanner">Get Started</button>
-        </section>
-        <section class="plannerContent defocus">
-          <div class="plannerTop">
-            <button class="plannerTopLeftButton">
+        <section class="workspaceAll" id="workspaceAll">
+          <div class="spaceWorkTop">
+            <button type="button" class="spaceWorkTitle">
               <img
-                src="assets/icons/dashboard/planner-icon.png"
-                alt="planner icon"
-                width="25"
+                src="assets/icons/dashboard/workspace.png"
+                alt="workspaceIcon"
+                width="19px"
+                class="workspaceIcon"
               />
-              <p class="weeklyPlannerH1">Weekly Planner</p>
+              <span>Team Space</span>
               <img
-                class="weeklyPlannerImage"
                 src="assets/icons/dashboard/setaExpandir.png"
-                alt="expand arrow"
-                width="13"
+                alt="setaExpandir"
+                width="14px"
+                class="setaExpandir"
               />
             </button>
-            <button class="day">Today</button>
-            <div class="weekChangerContainer">
-              <button class="changer" id="leftChanger"><</button>
-              <button class="changer" id="rigthChanger">></button>
-              <button class="plannerDate">July 21-27</button>
-              <button class="changer" id="opener">
+
+            <div class="canal">
+              <button type="button" class="overview">
                 <img
-                  src="assets/icons/dashboard/setaExpandir.png"
-                  alt="expand arrow"
-                  width="15"
+                  src="assets/icons/dashboard/overView.png"
+                  class="overViewImg"
+                  width="14px"
                 />
+                <span>Overview</span>
+              </button>
+              <button type="button" class="topList">
+                <img
+                  src="assets/icons/dashboard/list.png"
+                  class="listImg"
+                  width="14px"
+                />
+                <span>List</span>
+              </button>
+              <button type="button" class="calendar">
+                <img
+                  src="assets/icons/dashboard/calendar.png"
+                  class="calendarImg"
+                  width="13px"
+                />
+                <span>Calendar</span>
+              </button>
+              <button type="button" class="board">
+                <img
+                  src="assets/icons/dashboard/board.png"
+                  class="boardImg"
+                  width="14px"
+                />
+                <span>Board</span>
+              </button>
+              <button type="button" class="gantt">
+                <img
+                  src="assets/icons/dashboard/gantt.png"
+                  class="ganttImg"
+                  width="14px"
+                />
+                <span>Gantt</span>
+              </button>
+              <button type="button" class="table">
+                <img
+                  src="assets/icons/dashboard/table.png"
+                  class="tableImg"
+                  width="14px"
+                />
+                <span>Table</span>
               </button>
             </div>
-            <div class="weekly-mouthly">
-              <button class="weeklyButton">
-                <p>Weekly</p>
+          </div>
+
+          <div class="spaceWork">
+            <div class="addCardAndFilters">
+              <button type="button" class="filtersContainer">
                 <img
-                  src="assets/icons/dashboard/weekly.png"
-                  alt="weekly image"
-                  width="17"
+                  src="assets/icons/dashboard/filter.png"
+                  class="filterImg"
+                  alt="filterImg"
+                  width="16px"
+                  height="16px"
+                />
+                <span>Filters</span>
+              </button>
+              <button type="button" class="addCard">Add card</button>
+            </div>
+            <div class="cardContainer"></div>
+          </div>
+        </section>
+        <section class="plannerAll defocus" id="plannerAll">
+          <section class="plannerIntroducePage">
+            <h1 class="plannerH1">
+              Plan your week, organize appointments, and stay on track.
+            </h1>
+            <p class="plannerP">
+              A simple space to organize your daily plans, write notes, and keep
+              track of your important events throughout the week.
+            </p>
+            <button type="button" class="openPlanner">Get Started</button>
+          </section>
+          <section class="plannerContent defocus">
+            <div class="plannerTop">
+              <button class="plannerTopLeftButton">
+                <img
+                  src="assets/icons/dashboard/planner-icon.png"
+                  alt="planner icon"
+                  width="25"
+                />
+                <p class="weeklyPlannerH1">Weekly Planner</p>
+                <img
+                  class="weeklyPlannerImage"
+                  src="assets/icons/dashboard/setaExpandir.png"
+                  alt="expand arrow"
+                  width="13"
                 />
               </button>
-              <button class="monthlyButton">
-                <p>Monthly</p>
+              <button class="day">Today</button>
+              <div class="weekChangerContainer">
+                <button class="changer" id="leftChanger"><</button>
+                <button class="changer" id="rigthChanger">></button>
+                <button class="plannerDate">July 21-27</button>
+                <button class="changer" id="opener">
+                  <img
+                    src="assets/icons/dashboard/setaExpandir.png"
+                    alt="expand arrow"
+                    width="15"
+                  />
+                </button>
+              </div>
+              <div class="weekly-mouthly">
+                <button class="weeklyButton">
+                  <p>Weekly</p>
+                  <img
+                    src="assets/icons/dashboard/weekly.png"
+                    alt="weekly image"
+                    width="17"
+                  />
+                </button>
+                <button class="monthlyButton">
+                  <p>Monthly</p>
+                  <img
+                    src="assets/icons/dashboard/monthly.png"
+                    alt="monthly image"
+                    width="18"
+                  />
+                </button>
+                <button class="listButton">
+                  <p>List</p>
+                  <img
+                    src="assets/icons/dashboard/list-planner.png"
+                    alt="list"
+                    width="20"
+                  />
+                </button>
+              </div>
+              <button class="plannerButtons" id="darkMode">
                 <img
-                  src="assets/icons/dashboard/monthly.png"
-                  alt="monthly image"
+                  src="assets/icons/dashboard/half-moon.png"
+                  alt="darkMode"
                   width="18"
                 />
               </button>
-              <button class="listButton">
-                <p>List</p>
+              <button class="plannerButtons" id="more">
                 <img
-                  src="assets/icons/dashboard/list-planner.png"
-                  alt="list"
+                  src="assets/icons/dashboard/more.png"
+                  alt="more"
+                  width="15"
+                />
+              </button>
+              <button class="plannerButtons" id="notification">
+                <img
+                  src="assets/icons/dashboard/notification.png"
+                  alt="nottification"
                   width="20"
                 />
               </button>
             </div>
-            <button class="plannerButtons" id="darkMode">
-              <img
-                src="assets/icons/dashboard/half-moon.png"
-                alt="darkMode"
-                width="18"
-              />
-            </button>
-            <button class="plannerButtons" id="more">
-              <img
-                src="assets/icons/dashboard/more.png"
-                alt="more"
-                width="15"
-              />
-            </button>
-            <button class="plannerButtons" id="notification">
-              <img
-                src="assets/icons/dashboard/notification.png"
-                alt="nottification"
-                width="20"
-              />
-            </button>
-          </div>
-          <div class="plannerContentElements">
-            <section class="weeklyPlanner">
-              <div class="weekday">
-                <div>
-                  <p>MON</p>
-                  <p>21</p>
-                </div>
-                <div>
-                  <p>TUE</p>
-                  <p>22</p>
-                </div>
-                <div>
-                  <p>WED</p>
-                  <p>23</p>
-                </div>
-                <div>
-                  <p>THU</p>
-                  <p>24</p>
-                </div>
-                <div>
-                  <p>FRI</p>
-                  <p>25</p>
-                </div>
-                <div>
-                  <p>SAT</p>
-                  <p>26</p>
-                </div>
-                <div>
-                  <p>SUN</p>
-                  <p>27</p>
-                </div>
-              </div>
-              <div class="dailyBoxs">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </section>
-            <section class="plannerUtilities">
-              <div class="miniMonth">
-                <div class="calendarHeader">
-                  <span class="monthName">Julho 2026</span>
-                  <button id="leftToggleButton"><</button><button>></button>
-                </div>
-
-                <div class="weekDays">
-                  <span>S</span>
-                  <span>M</span>
-                  <span>T</span>
-                  <span>W</span>
-                  <span>T</span>
-                  <span>F</span>
-                  <span>S</span>
-                </div>
-
-                <div class="daysGrid"></div>
-              </div>
-              <div class="dailyTasks">
-                <div class="utilityElementsHeader">
-                  <h3>Tasks for the day</h3>
-                  <div class="dayQuant">
-                    <span>4</span>
+            <div class="plannerContentElements">
+              <section class="weeklyPlanner">
+                <div class="weekday">
+                  <div>
+                    <p>MON</p>
+                    <p>21</p>
+                  </div>
+                  <div>
+                    <p>TUE</p>
+                    <p>22</p>
+                  </div>
+                  <div>
+                    <p>WED</p>
+                    <p>23</p>
+                  </div>
+                  <div>
+                    <p>THU</p>
+                    <p>24</p>
+                  </div>
+                  <div>
+                    <p>FRI</p>
+                    <p>25</p>
+                  </div>
+                  <div>
+                    <p>SAT</p>
+                    <p>26</p>
+                  </div>
+                  <div>
+                    <p>SUN</p>
+                    <p>27</p>
                   </div>
                 </div>
-
-                <div class="taskList">
-                  <label>
-                    <input type="checkbox" />
-                    Finalizar Weekly Planner
-                  </label>
-
-                  <label>
-                    <input type="checkbox" />
-                    Commit no GitHub
-                  </label>
-
-                  <label>
-                    <input type="checkbox" />
-                    Estudar Matemática
-                  </label>
-
-                  <label>
-                    <input type="checkbox" />
-                    Responder e-mails
-                  </label>
+                <div class="dailyBoxs">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
                 </div>
-              </div>
-              <div class="priorities">
-                <div class="priorities utilityCard">
+              </section>
+              <section class="plannerUtilities">
+                <div class="miniMonth">
+                  <div class="calendarHeader">
+                    <span class="monthName">Julho 2026</span>
+                    <button id="leftToggleButton"><</button><button>></button>
+                  </div>
+
+                  <div class="weekDays">
+                    <span>S</span>
+                    <span>M</span>
+                    <span>T</span>
+                    <span>W</span>
+                    <span>T</span>
+                    <span>F</span>
+                    <span>S</span>
+                  </div>
+
+                  <div class="daysGrid"></div>
+                </div>
+                <div class="dailyTasks">
                   <div class="utilityElementsHeader">
-                    <h3>Priorities</h3>
+                    <h3>Tasks for the day</h3>
+                    <div class="dayQuant">
+                      <span>4</span>
+                    </div>
                   </div>
 
-                  <div class="priorityList">
-                    <div class="priority high">
-                      <span class="priorityDot"></span>
-                      <p>Weekly Planner</p>
+                  <div class="taskList">
+                    <label>
+                      <input type="checkbox" />
+                      Finalizar Weekly Planner
+                    </label>
+
+                    <label>
+                      <input type="checkbox" />
+                      Commit no GitHub
+                    </label>
+
+                    <label>
+                      <input type="checkbox" />
+                      Estudar Matemática
+                    </label>
+
+                    <label>
+                      <input type="checkbox" />
+                      Responder e-mails
+                    </label>
+                  </div>
+                </div>
+                <div class="priorities">
+                  <div class="priorities utilityCard">
+                    <div class="utilityElementsHeader">
+                      <h3>Priorities</h3>
                     </div>
 
-                    <div class="priority medium">
-                      <span class="priorityDot"></span>
-                      <p>Design Calendar</p>
-                    </div>
+                    <div class="priorityList">
+                      <div class="priority high">
+                        <span class="priorityDot"></span>
+                        <p>Weekly Planner</p>
+                      </div>
 
-                    <div class="priority low">
-                      <span class="priorityDot"></span>
-                      <p>README</p>
+                      <div class="priority medium">
+                        <span class="priorityDot"></span>
+                        <p>Design Calendar</p>
+                      </div>
+
+                      <div class="priority low">
+                        <span class="priorityDot"></span>
+                        <p>README</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="quickNotes">
-                <div class="quickNotes utilityCard">
-                  <div class="utilityElementsHeader">
-                    <h3>Quick Notes</h3>
-                  </div>
+                <div class="quickNotes">
+                  <div class="quickNotes utilityCard">
+                    <div class="utilityElementsHeader">
+                      <h3>Quick Notes</h3>
+                    </div>
 
-                  <textarea placeholder="Write something..." spellcheck="false">
-                  </textarea>
+                    <textarea
+                      placeholder="Write something..."
+                      spellcheck="false"
+                    >
+                    </textarea>
+                  </div>
                 </div>
-              </div>
-            </section>
-          </div>
+              </section>
+            </div>
+          </section>
         </section>
-      </section>
+      </div>
     </div>
     <script type="module" src="js/dashboard-js/controller.js"></script>
     <script type="module" src="js/dashboard-js/main.js"></script>

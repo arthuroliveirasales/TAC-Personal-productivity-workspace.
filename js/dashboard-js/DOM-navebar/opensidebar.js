@@ -1,5 +1,6 @@
 const openSidebar = document.querySelector(".openSidebar");
 const sidebar = document.querySelector(".sidebar");
+const openSideBarImg = document.querySelector(".openSideBarImg");
 
 export function initSidebar() {
   openSidebar.addEventListener("click", () => {
@@ -7,9 +8,9 @@ export function initSidebar() {
     openSidebar.classList.toggle("actived");
 
     if (openSidebar.classList.contains("actived")) {
-      openSidebar.textContent = "-";
+      openSideBarImg.src = "assets/icons/dashboard/close-sidebar.png";
     } else {
-      openSidebar.textContent = "+";
+      openSideBarImg.src = "assets/icons/dashboard/open-sidebar.png";
     }
   });
 }

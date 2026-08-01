@@ -1,6 +1,9 @@
 body {
   background-color: rgb(247, 247, 247);
   margin: 0;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  /*   overflow: hidden; */
 }
 
 body::-webkit-scrollbar {
@@ -17,6 +20,13 @@ input {
 }
 .mainLayout {
   display: flex;
+  height: 100vh;
+}
+.AllContent {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vh - 180px);
+  flex: 1;
 }
 /* workspace */
 .workspaceAll {

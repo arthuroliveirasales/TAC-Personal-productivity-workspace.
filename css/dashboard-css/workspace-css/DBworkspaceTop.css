@@ -1,12 +1,12 @@
 .spaceWorkTop {
   display: flex;
-  border: 1px solid rgb(221, 221, 221);
   flex-direction: column;
   border-top-left-radius: 30px;
   gap: 5px;
   height: 70px;
   padding-left: 10px;
   padding-top: 10px;
+  background-color: Canvas;
 }
 
 .spaceWorkTitle {

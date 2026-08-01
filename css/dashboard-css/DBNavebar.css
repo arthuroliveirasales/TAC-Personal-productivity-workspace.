@@ -1,5 +1,5 @@
 .navbar {
-  width: 200px;
+  width: 180px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -7,7 +7,34 @@
   border-bottom-right-radius: 30px;
   transition: width 0.2s ease;
 }
+/* .navbar::before {
+  content: "";
+  position: absolute;
 
+  top: 30px;
+  left: 200px;
+
+  width: 27px;
+  height: 30px;
+
+  background-color: #040d2c;
+  z-index: 1;
+}
+.navbar::after {
+  content: "";
+  position: absolute;
+
+  top: 30px;
+  left: 200px;
+
+  width: 27px;
+  height: 30px;
+
+  background-color: Canvas;
+
+  border-top-left-radius: 30px;
+  z-index: 1;
+} */
 /* .navbar:hover {
   width: 50px;
   flex-shrink: 0;
@@ -23,16 +50,23 @@
 }
 /* open sidebar button ============================== */
 .openSidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-radius: 10px;
-  background-color: rgb(70, 3, 255);
-  color: white;
+  background-color: white;
+  width: 135px;
   height: 44px;
-  width: 140px;
   margin: 10px;
   transition: transform 0.4s ease;
   margin-top: 30px;
   align-self: center;
+}
+.openSidebar img {
+  height: 48px;
+  width: 48px;
+  clip-path: inset(20%);
 }
 .openSidebar:hover {
   transform: scale(1.1);
@@ -43,17 +77,21 @@
 .openSidebar.actived {
   border: none;
   border-radius: 10px;
-  width: 30px;
-  background-color: rgb(70, 3, 255);
-  color: rgb(255, 230, 0);
+  background-color: transparent;
+  width: 135px;
   height: 44px;
-  width: 140px;
   margin: 10px;
   transition: transform 0.4s ease;
   margin-top: 30px;
   align-self: center;
 }
-
+.openSidebar.actived img {
+  width: 135px;
+  height: 44px;
+  align-self: center;
+  clip-path: none;
+  border-radius: 10px;
+}
 /* sidebar =================== */
 
 .sidebar {
@@ -61,37 +99,39 @@
   display: flex;
   transition: all 0.4s ease-in-out;
   color: transparent;
+  align-items: center;
+  justify-content: center;
 }
 .sidebar.visible {
   width: 200px;
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  background-color: rgb(238, 238, 238);
+  background-color: Canvas;
   transition: width 0.2s ease;
   align-items: center;
   justify-content: center;
   color: rgb(0, 0, 0);
+  border-right: 1px solid rgb(218, 218, 218);
 }
 
 /* open start button */
 
 .startButton {
   display: flex;
-  justify-content: center;
   align-items: center;
   border: none;
   background-color: transparent;
   color: white;
   height: 30px;
-  width: 30px;
+  width: 90px;
   margin: 10px;
   gap: 10px;
-  transition: transform 0.4s ease;
-  margin-left: 70px;
+  transition: 0.4s ease;
+  margin-left: 25px;
 }
 .startButton:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .startButton:active {
   opacity: 0.7;
@@ -101,20 +141,19 @@
 
 .plannerButton {
   display: flex;
-  justify-content: center;
   align-items: center;
   border: none;
   background-color: transparent;
   color: white;
   height: 30px;
-  width: 30px;
+  width: 90px;
   margin: 10px;
   gap: 10px;
   transition: transform 0.4s ease;
-  margin-left: 70px;
+  margin-left: 25px;
 }
 .plannerButton:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .plannerButton:active {
   opacity: 0.7;
